@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Md. Habibur Rahman Sagor | Backend Developer, AI Researcher & Founder of CouAI</title>
+<meta name="description" content="Portfolio of Md. Habibur Rahman Sagor: backend developer (Java Spring Boot), AI researcher and Founder & CEO of CouAI." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1220;--panel:#101b2e;--panel2:#15233a;--text:#eaf1fb;--muted:#9fb0c8;--line:rgba(159,176,200,.18);--amber:#ffb547;--cyan:#4cc9f0;--r:20px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Sora",system-ui,sans-serif;letter-spacing:-.03em}
+#net{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.55;pointer-events:none}
+header,main,footer{position:relative;z-index:1}
+.wrap{width:min(1100px,calc(100% - 40px));margin:0 auto}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(10,18,32,.75);border-bottom:1px solid var(--line)}
+.nav .wrap{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:"Sora";font-weight:800;font-size:19px}
+.brand i{color:var(--amber);font-style:normal}
+.links{display:flex;gap:22px;font-size:14px;font-weight:500;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid var(--line);background:rgba(255,255,255,.04);transition:transform .25s,border-color .25s}
+.btn:hover{transform:translateY(-2px);border-color:var(--amber)}
+.btn.pri{background:var(--amber);color:#1a1204;border-color:transparent}
+
+.hero{padding:90px 0 60px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hello{color:var(--cyan);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.hello::before{content:"";width:9px;height:9px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 12px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+h1{font-size:clamp(40px,7vw,76px);line-height:1;font-weight:800;margin-bottom:22px}
+h1 span{display:inline-block;opacity:0;transform:translateY(30px);animation:up .8s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.type{font-family:"Sora";font-size:clamp(17px,2.4vw,24px);font-weight:500;min-height:1.6em;color:var(--amber);margin-bottom:18px}
+.type::after{content:"|";margin-left:3px;animation:blink 1s steps(1) infinite;color:var(--text)}
+@keyframes blink{50%{opacity:0}}
+.lead{color:var(--muted);font-size:18px;max-width:560px;margin-bottom:28px}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;font-size:14px;color:var(--muted)}
+.chips a,.chips span{border:1px solid var(--line);padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.03);transition:color .2s,border-color .2s}
+.chips a:hover{color:var(--text);border-color:var(--cyan)}
+
+.photo{position:relative;width:min(340px,80%);aspect-ratio:1;margin:0 auto}
+.photo::before{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 0deg,var(--amber),var(--cyan),transparent 55%,var(--amber));animation:spin 8s linear infinite;-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px))}
+@keyframes spin{to{transform:rotate(360deg)}}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:50%;background:var(--panel2);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.badge{position:absolute;right:-18px;bottom:22px;background:var(--panel);border:1px solid var(--amber);border-radius:16px;padding:12px 16px;box-shadow:0 18px 50px rgba(0,0,0,.45);animation:float 5s ease-in-out infinite .6s}
+.badge b{font-family:"Sora";font-size:18px;display:block;color:var(--amber)}
+.badge small{color:var(--muted);font-size:12px}
+
+section{padding:64px 0}
+.head{margin-bottom:30px}
+.head h2{font-size:clamp(28px,4.5vw,44px);font-weight:800;line-height:1.1}
+.head p{color:var(--muted);margin-top:8px;max-width:560px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+.card{border:1px solid var(--line);background:rgba(16,27,46,.78);border-radius:var(--r);padding:24px;transition:border-color .25s,transform .25s}
+.card:hover{border-color:rgba(76,201,240,.5);transform:translateY(-4px)}
+.card h3{font-size:20px;margin-bottom:6px}
+.sub{color:var(--cyan);font-size:14px;font-weight:700;margin-bottom:12px}
+.card p,.card li{color:var(--muted);font-size:15px}
+.card ul{padding-left:18px;display:grid;gap:7px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tag{font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;background:rgba(76,201,240,.1);border:1px solid rgba(76,201,240,.25);color:#d6f3fc}
+.ml{display:inline-block;margin:16px 16px 0 0;font-size:14px;font-weight:700;color:var(--amber);border-bottom:1px solid rgba(255,181,71,.5)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:6px}
+.stat{border-left:3px solid var(--amber);padding:6px 0 6px 16px}
+.stat b{font-family:"Sora";font-size:clamp(30px,4vw,44px);display:block;line-height:1}
+.stat span{color:var(--muted);font-size:14px}
+
+.couai{position:relative;overflow:hidden;border:1px solid rgba(255,181,71,.55);border-radius:28px;padding:40px;background:linear-gradient(120deg,rgba(255,181,71,.12),rgba(76,201,240,.08) 60%,rgba(16,27,46,.8));display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+.couai::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.09),transparent);transform:skewX(-18deg);animation:sheen 5s ease-in-out infinite}
+@keyframes sheen{60%,100%{left:130%}}
+.logo{width:120px;height:120px;border-radius:30px;display:grid;place-items:center;font-family:"Sora";font-weight:800;font-size:26px;color:#1a1204;background:linear-gradient(135deg,var(--amber),#ff8a3d);box-shadow:0 0 0 0 rgba(255,181,71,.5);animation:glow 3s infinite}
+@keyframes glow{70%{box-shadow:0 0 0 26px rgba(255,181,71,0)}}
+.couai h2{font-size:clamp(26px,4vw,38px);margin-bottom:6px}
+.couai p{color:var(--muted);max-width:620px}
+
+.tl{display:grid;gap:18px;position:relative}
+.tl .item{display:grid;grid-template-columns:200px 1fr;gap:22px}
+.date{color:var(--amber);font-weight:700;padding-top:24px}
+.item.ceo .card{border-color:rgba(255,181,71,.5)}
+.skill b{display:block;margin-bottom:6px}
+.skill span{color:var(--muted);font-size:15px}
+
+.contact{text-align:center;border:1px solid var(--line);border-radius:30px;padding:54px 24px;background:radial-gradient(circle at 20% 0,rgba(255,181,71,.14),transparent 40%),radial-gradient(circle at 80% 100%,rgba(76,201,240,.14),transparent 40%),rgba(16,27,46,.8)}
+.contact h2{font-size:clamp(30px,5vw,50px);margin-bottom:12px}
+.contact p{color:var(--muted);max-width:560px;margin:0 auto 24px}
+.contact .row{justify-content:center;margin:0}
+footer{padding:30px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hero .wrap,.g2,.g3,.tl .item,.couai{grid-template-columns:1fr}.links{display:none}.stats{grid-template-columns:repeat(2,1fr)}.date{padding-top:0}.badge{right:0}.couai{padding:28px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,h1 span{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="net" aria-hidden="true"></canvas>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top">Sagor<i>.</i></a>
+  <nav class="links" aria-label="Main">
+    <a href="#couai">CouAI</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="btn" href="mailto:habiburr.sagor@gmail.com">Email me</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div>
+    <p class="hello">Hello, I'm</p>
+    <h1><span style="animation-delay:.1s">Md.</span> <span style="animation-delay:.2s">Habibur</span> <span style="animation-delay:.3s">Rahman</span> <span style="animation-delay:.4s">Sagor</span></h1>
+    <p class="type" id="type" aria-live="off"></p>
+    <p class="lead">Backend developer and AI researcher from Dhaka, Bangladesh. I build secure Spring Boot APIs, RAG-based AI products and privacy-preserving federated learning systems, and I'm the founder of CouAI.</p>
+    <div class="row">
+      <a class="btn pri" href="#projects">See my projects</a>
+      <a class="btn" href="#couai">Meet CouAI</a>
+      <a class="btn" href="#research">Read my research</a>
+    </div>
+    <div class="chips">
+      <span>Dhaka, Bangladesh</span>
+      <a href="tel:+8801796762282">+880 1796 762282</a>
+      <a href="mailto:habiburr.sagor@gmail.com">habiburr.sagor@gmail.com</a>
+    </div>
+  </div>
+  <div class="photo">
+    <img src="https://raw.githubusercontent.com/Sagor000000/HRS-Portfolio/main/Sagor.png" alt="Portrait of Md. Habibur Rahman Sagor" />
+    <div class="badge"><b>CouAI</b><small>Founder &amp; CEO</small></div>
+  </div>
+</div></section>
+
+<section style="padding-top:20px"><div class="wrap">
+  <div class="stats rv">
+    <div class="stat"><b data-n="4">0</b><span>Major projects</span></div>
+    <div class="stat"><b data-n="3">0</b><span>Research papers</span></div>
+    <div class="stat"><b data-n="300" data-s="+">0</b><span>Documents audited at 99% accuracy</span></div>
+    <div class="stat"><b data-n="2026">0</b><span>B.Sc. CSE graduate</span></div>
+  </div>
+</div></section>
+
+<section id="couai"><div class="wrap">
+  <div class="couai rv">
+    <div class="logo" aria-hidden="true">CouAI</div>
+    <div>
+      <h2>Founder &amp; CEO, CouAI</h2>
+      <p>I started CouAI, my own company, to turn my backend and AI research work into real products. I lead its vision, product direction and engineering.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="head rv"><h2>Experience</h2><p>Where I've built and led.</p></div>
+  <div class="tl">
+    <div class="item ceo rv"><div class="date">2026 – Present</div>
+      <div class="card"><h3>Founder &amp; CEO</h3><div class="sub">CouAI</div>
+        <ul><li>Founded CouAI and lead its product vision, technology and growth.</li></ul></div></div>
+    <div class="item rv"><div class="date">Jun 2026 – Sep 2026</div>
+      <div class="card"><h3>Junior Software Engineer (Intern)</h3><div class="sub">Suffix IT LTD · On-site</div>
+        <ul><li>Developed and maintained scalable backend services and RESTful APIs in Java (Spring Boot).</li><li>Designed server-side architecture and database interactions for seamless frontend integration.</li></ul></div></div>
+    <div class="item rv"><div class="date">Nov 2025 – May 2026</div>
+      <div class="card"><h3>AI Data Trainer (Part-time)</h3><div class="sub">Genmorphics AI Solution · Remote</div>
+        <ul><li>Audited PDF layout classifications and kept a 99% accuracy rate across 300+ complex documents for ML training datasets.</li><li>Resolved data inconsistencies and streamlined annotation pipelines for document parsing models.</li></ul></div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="head rv"><h2>Key projects</h2><p>Backend systems, AI products and full-stack apps.</p></div>
+  <div class="grid g2">
+    <article class="card rv"><h3>FinTech Digital Wallet API</h3><div class="sub">Spring Boot backend</div>
+      <p>Digital wallet API with account creation, virtual wallets and P2P transfers. Stateless JWT authentication, role-based authorization and ACID-safe transactions with @Transactional, in an N-Tier architecture with centralized exception handling.</p>
+      <div class="tags"><span class="tag">Java 17+</span><span class="tag">Spring Security</span><span class="tag">JWT</span><span class="tag">MySQL / PostgreSQL</span><span class="tag">Hibernate</span></div>
+      <a class="ml" href="https://github.com/Sagor000000/Fintech-Wallet" target="_blank" rel="noopener">GitHub</a></article>
+    <article class="card rv"><h3>LegalEase BD</h3><div class="sub">AI legal assistant</div>
+      <p>RAG pipeline with Pinecone vector search and a multi-model layer (Llama 3.1 + Gemini) for accurate legal answers. Multilingual React and Tailwind interface, deployed on Render and Vercel.</p>
+      <div class="tags"><span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">Pinecone</span><span class="tag">Llama 3.1</span><span class="tag">Gemini</span><span class="tag">React</span></div>
+      <a class="ml" href="#" aria-label="LegalEase BD live demo (add link)">Live demo</a><a class="ml" href="https://github.com/Sagor000000/NLP-Project" target="_blank" rel="noopener">GitHub</a></article>
+    <article class="card rv"><h3>Traveller Social Media Platform</h3><div class="sub">Full-stack web app</div>
+      <p>Social platform with a NestJS, TypeORM and PostgreSQL backend (REST APIs, JWT auth, Swagger docs) and a Next.js and TypeScript frontend for post feeds and profiles.</p>
+      <div class="tags"><span class="tag">Next.js</span><span class="tag">NestJS</span><span class="tag">PostgreSQL</span><span class="tag">TypeScript</span><span class="tag">JWT</span></div>
+      <a class="ml" href="#" aria-label="Traveller frontend GitHub (add link)">Frontend</a><a class="ml" href="#" aria-label="Traveller backend GitHub (add link)">Backend</a></article>
+    <article class="card rv"><h3>QuietZone</h3><div class="sub">Kotlin Android app</div>
+      <p>Auto-switches the device sound profile using OpenStreetMap geofencing and Retrofit-based API integration. Built during my Duke of Edinburgh Gold Award skill period.</p>
+      <div class="tags"><span class="tag">Kotlin</span><span class="tag">OpenStreetMap</span><span class="tag">Retrofit</span><span class="tag">Geofencing API</span></div>
+      <a class="ml" href="#" aria-label="QuietZone GitHub (add link)">GitHub</a></article>
+  </div>
+</div></section>
+
+<section id="research"><div class="wrap">
+  <div class="head rv"><h2>Research &amp; publications</h2><p>Federated learning, healthcare prediction and genomic AI.</p></div>
+  <div class="grid g3">
+    <article class="card rv"><div class="sub">ICCA 2026 · Lead author</div><h3>Privacy-Preserving Adult Content Detection</h3>
+      <p>Federated learning framework for adult content detection under Non-IID data distributions.</p></article>
+    <article class="card rv"><div class="sub">ECCT 2026 · Presented</div><h3>Mortality Risk Prediction</h3>
+      <p>Forward temporally validated, calibration-aware prediction with fairness and explainability in a population-based cohort. Dhaka International University.</p></article>
+    <article class="card rv"><div class="sub">IEEE QPAIN 2026 · Presented</div><h3>Masked Nucleotide Modeling with ResNet-1D</h3>
+      <p>Co-authored a lightweight ResNet-based framework for genomic embeddings. CUET, Chattogram.</p></article>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="head rv"><h2>Technical skills</h2></div>
+  <div class="grid g3">
+    <div class="card skill rv"><b>Languages</b><span>Python, Java, JavaScript, TypeScript, Kotlin</span></div>
+    <div class="card skill rv"><b>Backend &amp; APIs</b><span>Spring Boot, FastAPI, NestJS, RESTful APIs, JWT</span></div>
+    <div class="card skill rv"><b>AI &amp; ML</b><span>Federated Learning, RAG, Computer Vision, Pinecone</span></div>
+    <div class="card skill rv"><b>Databases &amp; ORM</b><span>PostgreSQL, MySQL, Spring Data JPA, TypeORM</span></div>
+    <div class="card skill rv"><b>Frontend</b><span>Next.js, Tailwind CSS</span></div>
+    <div class="card skill rv"><b>Education</b><span>B.Sc. CSE, American International University-Bangladesh (2022 – 2026)</span></div>
+  </div>
+</div></section>
+
+<section id="awards"><div class="wrap">
+  <div class="card rv"><h3>The Duke of Edinburgh's International Award, Bangladesh</h3><div class="sub">Gold Award Participant</div>
+    <ul><li>Skill: built the QuietZone Android app.</li><li>Service: led community cleanups and food drives.</li><li>Physical recreation: completed a 6-month fitness program.</li></ul></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="contact rv">
+    <h2>Let's build something useful</h2>
+    <p>Backend, AI or a project for CouAI. Send me a message.</p>
+    <div class="row">
+      <a class="btn pri" href="mailto:habiburr.sagor@gmail.com">Send email</a>
+      <a class="btn" href="tel:+8801796762282">Call me</a>
+      <a class="btn" href="https://linkedin.com/in/habibur-rahman-sagor" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/Sagor000000" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer>© 2026 Md. Habibur Rahman Sagor · Founder &amp; CEO, CouAI</footer>
+
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // reveal + counters
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)})},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*80+'ms';io.observe(el)});
+  function count(el){var t=+el.dataset.n,s=el.dataset.s||'',st=null;if(reduce){el.textContent=t+s;return}
+    (function f(ts){st=st||ts;var p=Math.min((ts-st)/1400,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)))+(p===1?s:'');if(p<1)requestAnimationFrame(f)})(performance.now())}
+  // typing
+  var roles=['Backend Developer','AI Researcher','Founder & CEO, CouAI'],te=document.getElementById('type'),ri=0,ci=0,del=false;
+  if(reduce){te.textContent=roles.join(' · ')}else{(function tick(){var w=roles[ri];ci+=del?-1:1;te.textContent=w.slice(0,ci);var d=del?35:75;
+    if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;ri=(ri+1)%roles.length;d=300}setTimeout(tick,d)})()}
+  // neural network background
+  var c=document.getElementById('net'),x=c.getContext('2d'),W,H,P=[],m={x:-999,y:-999};
+  function size(){W=c.width=innerWidth;H=c.height=innerHeight;var n=Math.min(70,Math.floor(W*H/18000));P=[];for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})}
+  size();addEventListener('resize',size);addEventListener('mousemove',function(e){m.x=e.clientX;m.y=e.clientY});
+  function draw(){x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var a=P[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;
+      var dx=a.x-m.x,dy=a.y-m.y,md=Math.hypot(dx,dy);if(md<120){a.x+=dx/md*1.2;a.y+=dy/md*1.2}
+      x.fillStyle='rgba(76,201,240,.9)';x.beginPath();x.arc(a.x,a.y,1.8,0,6.283);x.fill();
+      for(var j=i+1;j<P.length;j++){var b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){x.strokeStyle='rgba(255,181,71,'+(1-d/130)*.35+')';x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}}
+    if(!reduce)requestAnimationFrame(draw)}
+  draw();
+})();
+</script>
+</body>
+</html>
